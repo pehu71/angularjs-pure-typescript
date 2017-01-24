@@ -1,0 +1,11 @@
+{
+  "name": "angular-pure-typescript",
+  "version": "0.0.1",
+  "description": "A simple example of AngularJS with full flavored TypeScript",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Petr -pehu- Humplík",
+  "license": "ISC"
+}
