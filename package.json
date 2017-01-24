@@ -3,7 +3,12 @@
   "version": "0.0.1",
   "description": "A simple example of AngularJS with full flavored TypeScript. Uses ES6 import, SystemJS as module loader and full TypeScript code.",
   "keywords": [
-    "AngularJS", "angular", "TypeScript", "SystemJS", "import", "ES6"
+    "AngularJS",
+    "angular",
+    "TypeScript",
+    "SystemJS",
+    "import",
+    "ES6"
   ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -15,7 +20,9 @@
     "@types/angular": "^1.6.2"
   },
   "dependencies": {
+    "@types/angular-route": "^1.3.3",
     "angular": "^1.6.1",
+    "angular-route": "^1.6.1",
     "systemjs": "^0.20.0"
   }
 }

@@ -1,7 +1,8 @@
 import * as angular from "angular"
 import {IndexCtrl} from "./index-ctrl";
+import "ngRoute";
 
-angular.module('tsApp', [])
+angular.module('tsApp', ['ngRoute'])
 
     .controller({'IndexCtrl': () => new IndexCtrl()});
 

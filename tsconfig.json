@@ -13,6 +13,7 @@
     "node_modules"
   ],
   "types": [
-    "angular"
+    "angular",
+    "angular-route"
   ]
 }

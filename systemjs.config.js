@@ -9,7 +9,8 @@
         map: {
             // our app is within the app folder
             app: 'app',
-            angular: 'npm:angular'
+            angular: 'npm:angular',
+            ngRoute: "npm:angular-route/"
         },
         // packages tells the System loader how to load when no filename and/or no extension
         packages: {
@@ -20,6 +21,10 @@
             angular: {
                 main: 'index.js',
                 defaultExtension: 'js'
+            },
+            ngRoute: {
+                main: "index.js",
+                defaultExtension: "js"
             }
         }
     });
