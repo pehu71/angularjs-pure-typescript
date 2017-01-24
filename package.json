@@ -1,8 +1,10 @@
 {
   "name": "angular-pure-typescript",
   "version": "0.0.1",
-  "description": "A simple example of AngularJS with full flavored TypeScript",
-  "main": "index.js",
+  "description": "A simple example of AngularJS with full flavored TypeScript. Uses ES6 import, SystemJS as module loader and full TypeScript code.",
+  "keywords": [
+    "AngularJS", "angular", "TypeScript", "SystemJS", "import", "ES6"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
