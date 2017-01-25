@@ -1,9 +1,20 @@
 "use strict";
-var booksCmp = (function () {
-    function booksCmp() {
+var BooksComponentController = (function () {
+    function BooksComponentController() {
+        this.pageTitle = 'Books';
+    }
+    BooksComponentController.prototype.getBooks = function () {
+        console.log('getBooks');
+    };
+    return BooksComponentController;
+}());
+var BooksComponent = (function () {
+    function BooksComponent() {
+        this.controller = BooksComponentController;
+        this.controllerAs = 'booksCtrl';
         this.templateUrl = 'view/books.html';
     }
-    return booksCmp;
+    return BooksComponent;
 }());
-exports.booksCmp = booksCmp;
+exports.BooksComponent = BooksComponent;
 //# sourceMappingURL=books-cmp.js.map

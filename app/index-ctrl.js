@@ -1,7 +1,7 @@
 "use strict";
 var IndexCtrl = (function () {
     function IndexCtrl() {
-        this.customerName = 'pepa';
+        this.pageTitle = 'Home';
     }
     return IndexCtrl;
 }());

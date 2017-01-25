@@ -1,8 +1,25 @@
-export class booksCmp implements ng.IComponentOptions {
+class BooksComponentController implements ng.IController {
 
-    templateUrl:string;
+    pageTitle:string;
 
     constructor () {
+        this.pageTitle = 'Books';
+    }
+
+    getBooks() {
+        console.log('getBooks');
+    }
+}
+
+export class BooksComponent implements ng.IComponentOptions {
+
+    templateUrl:string;
+    controller: any;
+    controllerAs: string;
+
+    constructor () {
+        this.controller = BooksComponentController;
+        this.controllerAs = 'booksCtrl';
         this.templateUrl = 'view/books.html';
     }
 

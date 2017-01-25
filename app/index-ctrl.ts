@@ -1,9 +1,9 @@
 export class IndexCtrl implements ng.IController {
 
-    customerName: string;
+    pageTitle: string;
 
     constructor() {
-        this.customerName = 'pepa'
+        this.pageTitle = 'Home'
     }
 
 }
