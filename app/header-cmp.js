@@ -6,4 +6,4 @@ var headerCmp = (function () {
     return headerCmp;
 }());
 exports.headerCmp = headerCmp;
-//# sourceMappingURL=headerCmp.js.map
+//# sourceMappingURL=header-cmp.js.map
