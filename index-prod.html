@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <title>AngularJS pure TypeScript example</title>
+</head>
+<body>
+
+<!--header component using component API-->
+<header-cmp></header-cmp>
+
+<!--routing ng-view component-->
+<div class="container">
+    <ng-view></ng-view>
+</div>
+
+<!--SystemJS module loader for development scenario-->
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="dist/bundle.js"></script>
+
+</body>
+</html>
