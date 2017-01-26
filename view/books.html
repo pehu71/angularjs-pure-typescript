@@ -1,11 +1,30 @@
 <h2>{{booksCtrl.pageTitle}}</h2>
 
-<button type="button" class="btn btn-default" ng-click="booksCtrl.getBooks()">Get book list</button>
+<div class="row">
+    <div class="col col-lg-4">
+        <p>Books loaded in $onInit life-cycle hook:</p>
+    </div>
 
-<table ng-if="booksCtrl.books">
-    <tr ng-repeat="book in booksCtrl.books">
-        <td>{{book.id}}</td>
-        <td>{{book.name}}</td>
-        <td>{{book.author}}</td>
-    </tr>
-</table>
+    <div class="col col-lg-8">
+        <table ng-if="booksCtrl.books" style="width:60%;">
+            <tr ng-repeat="book in booksCtrl.books" ng-click="booksCtrl.selectBook($event, book.id)">
+                <td>{{book.id}}</td>
+                <td>{{book.name}}</td>
+                <td>{{book.author}}</td>
+            </tr>
+        </table>
+    </div>
+</div>
+<hr>
+<div class="row" ng-if="booksCtrl.selectedBook">
+    <div class="col col-lg-4">
+        <p>Selected book:</p>
+    </div>
+
+    <div class="col col-lg-8">
+        <p>Id: {{booksCtrl.selectedBook.id}}</p>
+        <p>Name: {{booksCtrl.selectedBook.name}}</p>
+        <p>Author: {{booksCtrl.selectedBook.author}}</p>
+    </div>
+</div>
+

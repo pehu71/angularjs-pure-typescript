@@ -4,17 +4,27 @@ class BooksComponentController implements ng.IController {
 
     pageTitle:string;
     books: Array<IBook>;
+    selectedBook: IBook;
+    $onInit: any;
 
     constructor (private $http: IHttpService) {
         this.pageTitle = 'Books';
+        this.$onInit = function () {
+            this.getBooks();
+        }
     }
 
-    getBooks() {
+    selectBook(event: any, bookId: number) {
+        this.selectedBook = this.books.filter((b) => b.id == bookId)[0];
+    }
+
+    private getBooks() {
         this.$http.get('data/books.json')
             .then((res) => {
                 this.books = <Array<IBook>>res.data['books'];
             })
     }
+
 }
 
 export class BooksComponent implements ng.IComponentOptions {
