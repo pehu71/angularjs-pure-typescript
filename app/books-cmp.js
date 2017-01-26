@@ -1,10 +1,15 @@
 "use strict";
 var BooksComponentController = (function () {
-    function BooksComponentController() {
+    function BooksComponentController($http) {
+        this.$http = $http;
         this.pageTitle = 'Books';
     }
     BooksComponentController.prototype.getBooks = function () {
-        console.log('getBooks');
+        var _this = this;
+        this.$http.get('data/books.json')
+            .then(function (res) {
+            _this.books = res.data['books'];
+        });
     };
     return BooksComponentController;
 }());

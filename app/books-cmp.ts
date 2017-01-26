@@ -1,21 +1,27 @@
+import IHttpService = angular.IHttpService;
+
 class BooksComponentController implements ng.IController {
 
     pageTitle:string;
+    books: Array<IBook>;
 
-    constructor () {
+    constructor (private $http: IHttpService) {
         this.pageTitle = 'Books';
     }
 
     getBooks() {
-        console.log('getBooks');
+        this.$http.get('data/books.json')
+            .then((res) => {
+                this.books = <Array<IBook>>res.data['books'];
+            })
     }
 }
 
 export class BooksComponent implements ng.IComponentOptions {
 
-    templateUrl:string;
     controller: any;
     controllerAs: string;
+    templateUrl:string;
 
     constructor () {
         this.controller = BooksComponentController;
