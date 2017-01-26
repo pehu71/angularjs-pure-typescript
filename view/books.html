@@ -7,7 +7,7 @@
 
     <div class="col col-lg-8">
         <table ng-if="booksCtrl.books" style="width:60%;">
-            <tr ng-repeat="book in booksCtrl.books" ng-click="booksCtrl.selectBook($event, book.id)">
+            <tr ng-repeat="book in booksCtrl.books" ng-click="booksCtrl.selectBook(book.id)">
                 <td>{{book.id}}</td>
                 <td>{{book.name}}</td>
                 <td>{{book.author}}</td>

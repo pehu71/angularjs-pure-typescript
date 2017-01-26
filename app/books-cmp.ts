@@ -9,12 +9,12 @@ class BooksComponentController implements ng.IController {
 
     constructor (private $http: IHttpService) {
         this.pageTitle = 'Books';
-        this.$onInit = function () {
+        this.$onInit = () => {
             this.getBooks();
         }
     }
 
-    selectBook(event: any, bookId: number) {
+    selectBook(bookId: number) {
         this.selectedBook = this.books.filter((b) => b.id == bookId)[0];
     }
 

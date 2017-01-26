@@ -1,13 +1,14 @@
 "use strict";
 var BooksComponentController = (function () {
     function BooksComponentController($http) {
+        var _this = this;
         this.$http = $http;
         this.pageTitle = 'Books';
         this.$onInit = function () {
-            this.getBooks();
+            _this.getBooks();
         };
     }
-    BooksComponentController.prototype.selectBook = function (event, bookId) {
+    BooksComponentController.prototype.selectBook = function (bookId) {
         this.selectedBook = this.books.filter(function (b) { return b.id == bookId; })[0];
     };
     BooksComponentController.prototype.getBooks = function () {
